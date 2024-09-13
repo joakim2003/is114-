@@ -1,0 +1,32 @@
+#Empty circle
+background = empty-scene(260,200)
+
+#Kontrakt circle(number, string, string) -> Image
+circle-red = circle(50, "outline", "red")
+circle-blue = circle(50, "outline", "blue")
+circle-green = circle(50, "outline", "green")
+circle-yellow = circle(50, "outline", "yellow")
+circle-black = circle(50, "outline", "black")
+
+#Farge versjon
+circle1 = put-image(circle-blue, 60, 140, background)
+circle2 = put-image(circle-yellow, 95, 110, circle1)
+circle3 = put-image(circle-black, 125, 140, circle2)
+circle4 = put-image(circle-green, 160, 110, circle3)
+circle5 = put-image(circle-red, 190, 140, circle4)
+
+#Monokrom versjon
+circle-monokrom = put-image(circle-black, 60, 140, background)
+circle-monokrom1 = put-image(circle-black, 95, 110, circle-monokrom)
+circle-monokrom2 = put-image(circle-black, 125, 140, circle-monokrom1)
+circle-monokrom3 = put-image(circle-black, 160, 110, circle-monokrom2)
+circle-monokrom4 = put-image(circle-black, 190, 140, circle-monokrom3)
+
+#Farget eller monokrom versjon
+fun Olympisk-flagg(farge) :
+  if farge == "farger" :
+    circle5
+  else if farge == "monokrom" :
+    circle-monokrom4
+  end
+end
